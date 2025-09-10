@@ -42,6 +42,10 @@ export default function TrackingPage() {
 
   const { data: shipment, isLoading, error } = useQuery<Shipment>({
     queryKey: ['/api/shipments/track', trackingNumber],
+    queryFn: () => fetch(`/api/shipments/track/${trackingNumber}`).then(res => {
+      if (!res.ok) throw new Error('Shipment not found');
+      return res.json();
+    }),
     enabled: !!trackingNumber && searchAttempted,
     retry: false
   });

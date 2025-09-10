@@ -84,19 +84,20 @@ export default function ContactPage() {
       email: "",
       phone: "",
       company: "",
-      service: "",
+      service: undefined,
       message: ""
     }
   });
 
   const mutation = useMutation({
-    mutationFn: (data: InsertContact) => apiRequest("/api/contacts", {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: {
-        "Content-Type": "application/json"
-      }
-    }),
+    mutationFn: (data: InsertContact) => 
+      fetch("/api/contacts", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          "Content-Type": "application/json"
+        }
+      }).then(res => res.json()),
     onSuccess: () => {
       toast({
         title: "Message Sent!",
@@ -207,7 +208,8 @@ export default function ContactPage() {
                             <FormControl>
                               <Input 
                                 placeholder="+1 (555) 123-4567" 
-                                {...field} 
+                                {...field}
+                                value={field.value || ""}
                                 data-testid="input-phone"
                               />
                             </FormControl>
@@ -225,7 +227,8 @@ export default function ContactPage() {
                             <FormControl>
                               <Input 
                                 placeholder="ABC Corporation" 
-                                {...field} 
+                                {...field}
+                                value={field.value || ""}
                                 data-testid="input-company"
                               />
                             </FormControl>
@@ -241,7 +244,7 @@ export default function ContactPage() {
                       render={({ field }) => (
                         <FormItem>
                           <FormLabel>Service Interested In</FormLabel>
-                          <Select onValueChange={field.onChange} defaultValue={field.value}>
+                          <Select onValueChange={field.onChange} defaultValue={field.value || undefined}>
                             <FormControl>
                               <SelectTrigger data-testid="select-service">
                                 <SelectValue placeholder="Select a service" />

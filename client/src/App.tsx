@@ -9,6 +9,11 @@ import AboutPage from "@/pages/AboutPage";
 import ServicesPage from "@/pages/ServicesPage";
 import IndustriesPage from "@/pages/IndustriesPage";
 import TrackingPage from "@/pages/TrackingPage";
+import ContactPage from "@/pages/ContactPage";
+import CareersPage from "@/pages/CareersPage";
+import BlogPage from "@/pages/BlogPage";
+import BlogPostPage from "@/pages/BlogPostPage";
+import FAQPage from "@/pages/FAQPage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -22,7 +27,11 @@ function Router() {
           <Route path="/services" component={ServicesPage} />
           <Route path="/industries" component={IndustriesPage} />
           <Route path="/tracking" component={TrackingPage} />
-          {/* TODO: Add remaining pages */}
+          <Route path="/contact" component={ContactPage} />
+          <Route path="/careers" component={CareersPage} />
+          <Route path="/blog" component={BlogPage} />
+          <Route path="/blog/:slug" component={BlogPostPage} />
+          <Route path="/faq" component={FAQPage} />
           {/* Fallback to 404 */}
           <Route component={NotFound} />
         </Switch>

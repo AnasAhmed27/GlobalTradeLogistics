@@ -1,0 +1,30 @@
+You are a senior website product designer and developer brief writer for a shipping, logistics, and trading company. Create a full website package for a Replit-hosted site that is professional, animated, and includes live media and live counters. Provide output sections exactly as listed:
+
+1. Project Summary (1–2 sentences).
+2. Brand essentials: 3 taglines, elevator pitch, primary color palette, recommended fonts (Google Fonts), and 5 icon suggestions.
+3. Sitemap and page list.
+4. For each page (Homepage, About, Services, Industries, Tracking, Contact, Careers, Blog, FAQs):
+   - SEO title & meta description.
+   - H1 and H2 headings.
+   - Short marketing hero text (50–70 chars).
+   - Full page copy (200–450 words where appropriate).
+   - 3 suggested animated UI elements (e.g., hero parallax, counters that animate when visible, cards that flip on hover) and short CSS/JS idea for each.
+   - Example CTA buttons and microcopy.
+
+5. Live / Dynamic features (detailed):
+   - Live counters: provide a sample JSON payload, recommended event flow (WebSocket or Server-Sent Events), and sample frontend code pseudocode to animate counters on Replit.
+   - Real-time tracking UI: example REST/Socket response and how to display route progress (map + timeline).
+   - Live media: instructions for embedding live video (HLS or WebRTC), fallback to recorded videos, and a dynamic gallery that updates from a CDN or server endpoint.
+   - Recommendations for libraries to use on Replit (vanilla JS + GSAP for animation, Mapbox/Leaflet for maps, hls.js or simple WebRTC embed for live streaming, Socket.IO or SSE for counters).
+
+6. Sample JSON examples:
+   - Live counters payload (with keys and data types).
+   - Tracking API example (status, ETA, coordinates).
+7. Accessibility & performance checklist (lazy load images/videos, ARIA labels, mobile-first).
+8. Developer checklist for Replit deployment:
+   - Which server endpoints to create, example routes (e.g., /api/counters, /api/tracking/{id}, /api/live-streams).
+   - How to test live counters locally on Replit (simple Node/Express example).
+   - How to connect a sample streaming source (HLS link) to the site.
+9. Deliverable files list: index.html, styles.css, app.js, sample server script (Node), README with Replit run instructions.
+
+Tone: corporate & trustworthy. Output: content + short code snippets, pseudocode, and concrete integration steps so a Replit developer can implement live counters and live media quickly.
