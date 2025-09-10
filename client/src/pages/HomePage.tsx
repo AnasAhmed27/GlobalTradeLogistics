@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { SEOHead } from "@/components/SEOHead";
 import { 
   Ship, 
   Truck, 
@@ -69,6 +70,13 @@ const testimonials = [
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
+      <SEOHead
+        title="Global Logistics Solutions - Professional Shipping & Trading Services"
+        description="Expert international shipping, freight forwarding, customs clearance, and supply chain management. Track shipments, get quotes, and grow your global business with us."
+        keywords="international shipping, freight forwarding, customs clearance, cargo tracking, supply chain management, import export, logistics services"
+        ogTitle="Global Logistics Solutions - Your Partner in International Trade"
+        ogDescription="Professional shipping and trading services worldwide. Get instant quotes, track shipments, and streamline your supply chain with our expert team."
+      />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary/10 via-primary/5 to-background py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
