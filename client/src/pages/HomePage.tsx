@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { SEOHead } from "@/components/SEOHead";
+import CountUp from "react-countup";
 import { 
   Ship, 
   Truck, 
@@ -17,6 +18,8 @@ import {
   Award,
   TrendingUp
 } from "lucide-react";
+
+
 
 const services = [
   {
@@ -46,10 +49,10 @@ const services = [
 ];
 
 const stats = [
-  { number: "15+", label: "Years of Experience", icon: Award },
-  { number: "50,000+", label: "Shipments Delivered", icon: Package },
-  { number: "120+", label: "Countries Served", icon: Globe },
-  { number: "98%", label: "On-Time Delivery", icon: Clock }
+  { number: 15, suffix: "+", label: "Years of Experience", icon: Award },
+  { number: 50000, suffix: "+", label: "Shipments Delivered", icon: Package },
+  { number: 120, suffix: "+", label: "Countries Served", icon: Globe },
+  { number: 98, suffix: "%", label: "On-Time Delivery", icon: Clock }
 ];
 
 const testimonials = [
@@ -131,24 +134,24 @@ export default function HomePage() {
 
       {/* Stats Section */}
       <section className="py-16 bg-gray-50 dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="flex justify-center mb-4">
-                  <stat.icon className="h-12 w-12 text-primary" />
-                </div>
-                <div className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-2" data-testid={`stat-${index}`}>
-                  {stat.number}
-                </div>
-                <div className="text-gray-600 dark:text-gray-300 font-medium">
-                  {stat.label}
-                </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className="flex justify-center mb-4">
+                <stat.icon className="h-12 w-12 text-primary" />
               </div>
-            ))}
-          </div>
+              <div className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-2">
+                <CountUp end={stat.number} duration={2} />{stat.suffix}
+              </div>
+              <div className="text-gray-600 dark:text-gray-300 font-medium">
+                {stat.label}
+              </div>
+            </div>
+          ))}
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* Services Section */}
       <section className="py-20">

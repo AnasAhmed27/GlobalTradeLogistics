@@ -1,11 +1,12 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Target, 
-  Eye, 
-  Heart, 
-  Users, 
-  Globe, 
+import CountUp from "react-countup";
+import {
+  Target,
+  Eye,
+  Heart,
+  Users,
+  Globe,
   Award,
   Calendar,
   Building,
@@ -120,7 +121,7 @@ export default function AboutPage() {
               Connecting Businesses <span className="text-primary">Worldwide</span>
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              For over 15 years, we've been the trusted logistics partner for businesses of all sizes, 
+              For over 15 years, we've been the trusted logistics partner for businesses of all sizes,
               providing reliable, efficient, and cost-effective shipping solutions across the globe.
             </p>
           </div>
@@ -137,22 +138,22 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-6 text-gray-600 dark:text-gray-300">
                 <p className="text-lg leading-relaxed">
-                  Global Logistics Solutions was founded in 2010 with a simple yet ambitious goal: 
-                  to make international shipping accessible, reliable, and affordable for businesses 
-                  of all sizes. What started as a small freight forwarding company has grown into 
+                  Global Logistics Solutions was founded in 2010 with a simple yet ambitious goal:
+                  to make international shipping accessible, reliable, and affordable for businesses
+                  of all sizes. What started as a small freight forwarding company has grown into
                   a comprehensive logistics provider serving over 120 countries worldwide.
                 </p>
                 <p className="text-lg leading-relaxed">
-                  Our journey began when our founder, Michael Rodriguez, recognized the challenges 
-                  that small and medium businesses faced when trying to ship internationally. 
-                  Complex regulations, high costs, and unreliable service were common barriers. 
-                  We set out to change that by building a company that prioritizes transparency, 
+                  Our journey began when our founder, Michael Rodriguez, recognized the challenges
+                  that small and medium businesses faced when trying to ship internationally.
+                  Complex regulations, high costs, and unreliable service were common barriers.
+                  We set out to change that by building a company that prioritizes transparency,
                   efficiency, and customer success.
                 </p>
                 <p className="text-lg leading-relaxed">
-                  Today, we're proud to be a trusted partner for thousands of businesses, from 
-                  e-commerce startups to multinational corporations. Our success is measured not 
-                  just by the number of shipments we handle, but by the growth and success of 
+                  Today, we're proud to be a trusted partner for thousands of businesses, from
+                  e-commerce startups to multinational corporations. Our success is measured not
+                  just by the number of shipments we handle, but by the growth and success of
                   our clients' businesses.
                 </p>
               </div>
@@ -161,28 +162,39 @@ export default function AboutPage() {
               <Card className="text-center">
                 <CardContent className="p-6">
                   <Building className="h-12 w-12 text-primary mx-auto mb-4" />
-                  <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">25+</div>
+                  <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                    <CountUp end={25} duration={2} />+
+                  </div>
                   <div className="text-sm text-gray-600 dark:text-gray-300">Global Offices</div>
                 </CardContent>
               </Card>
+
               <Card className="text-center">
                 <CardContent className="p-6">
                   <Users className="h-12 w-12 text-primary mx-auto mb-4" />
-                  <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">500+</div>
+                  <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                    <CountUp end={500} duration={2} />+
+                  </div>
                   <div className="text-sm text-gray-600 dark:text-gray-300">Team Members</div>
                 </CardContent>
               </Card>
+
               <Card className="text-center">
                 <CardContent className="p-6">
                   <Globe className="h-12 w-12 text-primary mx-auto mb-4" />
-                  <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">120+</div>
+                  <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                    <CountUp end={120} duration={2} />+
+                  </div>
                   <div className="text-sm text-gray-600 dark:text-gray-300">Countries Served</div>
                 </CardContent>
               </Card>
+
               <Card className="text-center">
                 <CardContent className="p-6">
                   <Award className="h-12 w-12 text-primary mx-auto mb-4" />
-                  <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">15+</div>
+                  <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                    <CountUp end={15} duration={2} />+
+                  </div>
                   <div className="text-sm text-gray-600 dark:text-gray-300">Industry Awards</div>
                 </CardContent>
               </Card>
@@ -202,7 +214,7 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base">
-                  To empower businesses of all sizes to reach global markets through reliable, 
+                  To empower businesses of all sizes to reach global markets through reliable,
                   efficient, and innovative logistics solutions that drive growth and success.
                 </CardDescription>
               </CardContent>
@@ -215,7 +227,7 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base">
-                  To be the world's most trusted logistics partner, connecting every business 
+                  To be the world's most trusted logistics partner, connecting every business
                   to global opportunities through technology-driven, sustainable shipping solutions.
                 </CardDescription>
               </CardContent>
@@ -228,7 +240,7 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base">
-                  Every shipment matters. We promise to treat your cargo with the same care and 
+                  Every shipment matters. We promise to treat your cargo with the same care and
                   urgency as our own, ensuring it reaches its destination safely and on time.
                 </CardDescription>
               </CardContent>

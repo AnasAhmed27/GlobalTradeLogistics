@@ -2,14 +2,15 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Car, 
-  Smartphone, 
-  Shirt, 
-  Apple, 
-  Pill, 
-  Cog, 
-  Fuel, 
+import CountUp from "react-countup";
+import {
+  Car,
+  Smartphone,
+  Shirt,
+  Apple,
+  Pill,
+  Cog,
+  Fuel,
   ShoppingBag,
   Factory,
   Plane,
@@ -39,7 +40,7 @@ const industries = [
       "Oversized cargo for heavy machinery",
       "Assembly line coordination"
     ],
-    stats: { clients: "150+", shipments: "12,000+", countries: "45+" }
+    stats: { clients: 150, shipments: 12000, countries: 45 }
   },
   {
     icon: Smartphone,
@@ -57,7 +58,7 @@ const industries = [
       "Insurance for high-value goods",
       "White glove delivery service"
     ],
-    stats: { clients: "200+", shipments: "25,000+", countries: "60+" }
+    stats: { clients: 200, shipments: 25000, countries: 60 }
   },
   {
     icon: Shirt,
@@ -75,7 +76,7 @@ const industries = [
       "Fashion week logistics",
       "Sustainable packaging options"
     ],
-    stats: { clients: "300+", shipments: "18,000+", countries: "55+" }
+    stats: { clients: 300, shipments: 18000, countries: 55 }
   },
   {
     icon: Apple,
@@ -93,7 +94,7 @@ const industries = [
       "Organic certification maintenance",
       "Perishable goods prioritization"
     ],
-    stats: { clients: "120+", shipments: "8,000+", countries: "35+" }
+    stats: { clients: 120, shipments: 8000, countries: 35 }
   },
   {
     icon: Pill,
@@ -111,7 +112,7 @@ const industries = [
       "Medical emergency shipments",
       "Regulatory documentation"
     ],
-    stats: { clients: "80+", shipments: "5,000+", countries: "25+" }
+    stats: { clients: 80, shipments: 5000, countries: 25 }
   },
   {
     icon: Cog,
@@ -129,7 +130,7 @@ const industries = [
       "Engineering support",
       "Site delivery coordination"
     ],
-    stats: { clients: "90+", shipments: "3,500+", countries: "40+" }
+    stats: { clients: 90, shipments: 3500, countries: 40 }
   },
   {
     icon: Fuel,
@@ -147,7 +148,7 @@ const industries = [
       "Remote location delivery",
       "Environmental compliance"
     ],
-    stats: { clients: "60+", shipments: "2,200+", countries: "30+" }
+    stats: { clients: 60, shipments: 2200, countries: 30 }
   },
   {
     icon: ShoppingBag,
@@ -165,7 +166,7 @@ const industries = [
       "Inventory management",
       "Customer experience optimization"
     ],
-    stats: { clients: "500+", shipments: "50,000+", countries: "70+" }
+    stats: { clients: 500, shipments: 50000, countries: 70 }
   }
 ];
 
@@ -201,7 +202,7 @@ export default function IndustriesPage() {
               Specialized Logistics for <span className="text-primary">Every Industry</span>
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              From automotive to pharmaceuticals, we understand the unique shipping requirements 
+              From automotive to pharmaceuticals, we understand the unique shipping requirements
               of your industry and provide tailored solutions that ensure compliance, efficiency, and reliability.
             </p>
           </div>
@@ -296,18 +297,28 @@ export default function IndustriesPage() {
                     <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
                       <h4 className="font-semibold text-gray-900 dark:text-white mb-3 text-center">Track Record</h4>
                       <div className="grid grid-cols-3 gap-4 text-center">
+
                         <div>
-                          <div className="text-lg font-bold text-primary">{industry.stats.clients}</div>
+                          <div className="text-lg font-bold text-primary">
+                            <CountUp end={industry.stats.clients} duration={2} />+
+                          </div>
                           <div className="text-xs text-gray-600 dark:text-gray-300">Clients</div>
                         </div>
+
                         <div>
-                          <div className="text-lg font-bold text-primary">{industry.stats.shipments}</div>
+                          <div className="text-lg font-bold text-primary">
+                            <CountUp end={industry.stats.shipments} duration={2} separator="," />+
+                          </div>
                           <div className="text-xs text-gray-600 dark:text-gray-300">Shipments</div>
                         </div>
+
                         <div>
-                          <div className="text-lg font-bold text-primary">{industry.stats.countries}</div>
+                          <div className="text-lg font-bold text-primary">
+                            <CountUp end={industry.stats.countries} duration={2} />+
+                          </div>
                           <div className="text-xs text-gray-600 dark:text-gray-300">Countries</div>
                         </div>
+
                       </div>
                     </div>
                   </div>
@@ -434,7 +445,7 @@ export default function IndustriesPage() {
             Ready to Optimize Your Industry's Logistics?
           </h2>
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-            Let our industry experts design a customized logistics solution that meets your 
+            Let our industry experts design a customized logistics solution that meets your
             specific requirements and drives your business forward.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
